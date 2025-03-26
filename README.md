@@ -2,64 +2,66 @@
 
 ## Visão Geral
 
-O mercado automotivo brasileiro é um dos mais aquecidos do mundo, movimentando bilhões de reais anualmente. Seja para consumidores, revendedores ou instituições financeiras, a capacidade de prever com precisão os preços dos veículos é essencial para tomada de decisões estratégicas. 
+O mercado automotivo brasileiro é extremamente aquecido, movimentando bilhões de reais anualmente. A previsão de preços de veículos pode oferecer benefícios significativos para consumidores, revendedores e instituições financeiras, auxiliando na tomada de decisões estratégicas e na avaliação de riscos.
 
-Neste projeto, estou explorando técnicas avançadas de **Machine Learning** para criar modelos preditivos que ajudem a estimar os preços de veículos com base em suas características, como marca, modelo, quilometragem e idade.
+Neste projeto, estou explorando diversas técnicas de Machine Learning para desenvolver modelos preditivos que estimem com precisão os preços de veículos. Inicialmente, utilizei o Random Forest, e agora estou ampliando o escopo com a implementação de modelos de Multilayer Perceptron (MLP) e LightGBM.
 
 ---
 
-## Objetivo do Projeto
+## Objetivos do Projeto
 
-O objetivo principal deste projeto é desenvolver um modelo de previsão de preços de veículos utilizando diferentes algoritmos de aprendizado de máquina. Até o momento, utilizei o **Random Forest**, e agora estou expandindo o projeto para incluir o **Multilayer Perceptron (MLP)**, uma rede neural artificial.
-
-### Por que isso é importante?
-
-- **Consumidores:** Ajudar compradores a identificar preços justos e evitar pagar acima do valor de mercado.
-- **Revendedores:** Oferecer ferramentas para precificação precisa, otimizando lucros e competitividade.
-- **Instituições Financeiras:** Melhorar a avaliação de risco em financiamentos e seguros de veículos.
+- Desenvolver modelos preditivos que estimem os preços de veículos com base em suas características (como marca, modelo, quilometragem, idade, entre outros).
+- Comparar o desempenho de diferentes algoritmos utilizando métricas de avaliação, especialmente o MAE (Mean Absolute Error).
+- Explorar e otimizar hiperparâmetros utilizando técnicas como GridSearchCV para atingir a melhor performance possível.
+- Oferecer insights que possam auxiliar consumidores, revendedores e instituições financeiras na tomada de decisões.
 
 ---
 
 ## Técnicas Utilizadas
 
 ### 1. Random Forest 🌳
-O **Random Forest** foi o primeiro modelo aplicado neste projeto. Ele é um algoritmo de aprendizado supervisionado baseado em árvores de decisão e é conhecido por:
 
-- **Alta precisão:** Captura relações não lineares entre as variáveis.
-- **Robustez:** Reduz o risco de overfitting devido ao uso de múltiplas árvores combinadas.
-- **Importância das features:** Permite identificar quais características mais influenciam nos preços dos veículos.
+O Random Forest é uma técnica de ensemble learning que utiliza várias árvores de decisão para obter previsões mais robustas e precisas.  
+**Principais Características:**
+- Alta precisão na captura de relações não lineares.
+- Redução do risco de overfitting por meio do uso de bagging e da amostragem aleatória de features.
+- Capacidade de fornecer insights sobre a importância de cada feature na previsão.
+
+---
 
 ### 2. Multilayer Perceptron (MLP) 🤖
-Agora, estou introduzindo o **Multilayer Perceptron (MLP)**, uma rede neural artificial que pode capturar padrões ainda mais complexos nos dados. Algumas características do MLP incluem:
 
-- **Capacidade de generalização:** Aprende representações complexas ao passar os dados por várias camadas de neurônios.
-- **Flexibilidade:** Funciona bem para dados não lineares e de alta dimensionalidade.
-- **Treinamento com backpropagation:** Os pesos da rede são ajustados iterativamente para minimizar o erro nas previsões.
+O MLP é uma rede neural artificial composta por uma ou mais camadas ocultas, capaz de aprender representações complexas dos dados.  
+**Principais Características:**
+- Modela relações altamente não lineares.
+- Flexível para capturar padrões complexos mesmo em dados com alta dimensionalidade.
+- Treinamento por meio de backpropagation, onde os pesos são ajustados iterativamente para minimizar os erros.
+
+---
+
+### 3. LightGBM 🌟
+
+O LightGBM é um algoritmo de gradient boosting otimizado para velocidade e eficiência, ideal para grandes conjuntos de dados.  
+**Principais Características:**
+- Processa grandes volumes de dados de maneira rápida e eficiente.
+- Excelente na captura de interações complexas entre variáveis.
+- Escalável e adequado para aplicações do mundo real.
 
 ---
 
 ## Estrutura do Projeto
 
-- **`RandomFlorestAuto.ipynb`:** Notebook com o modelo de Random Forest, incluindo pré-processamento, engenharia de features e avaliação.
-- **`MultilayerPerceptronAuto.ipynb`:** Notebook em desenvolvimento para aplicação do Multilayer Perceptron (MLP).
-- **`README.md`:** Este arquivo, explicando o propósito e os detalhes do projeto.
+- **RandomFlorestAuto.ipynb**: Notebook contendo o modelo Random Forest, com etapas de pré-processamento, engenharia de features e avaliação.
+- **MultilayerPerceptronAuto.ipynb**: Notebook em desenvolvimento para a implementação e ajuste do modelo MLP.
+- **LightGBM_Auto.ipynb**: Notebook dedicado ao desenvolvimento e otimização do modelo LightGBM.
+- **README.md**: Este arquivo, que descreve o propósito, as técnicas e a estrutura do projeto.
 
 ---
 
-## Próximos Passos
+## Conclusão e Próximos Passos
 
-1. **Treinamento do MLP:** Implementar e ajustar o modelo de Multilayer Perceptron.
-2. **Comparação de Modelos:** Avaliar o desempenho do MLP em relação ao Random Forest utilizando métricas como o **Mean Absolute Error (MAE)**.
-3. **Otimização de Hiperparâmetros:** Aplicar técnicas como o **GridSearchCV** para encontrar a melhor configuração para cada modelo.
-4. **Inclusão de Novas Variáveis:** Explorar a adição de variáveis macroeconômicas e regionais para melhorar a precisão das previsões.
-5. **Publicação dos Resultados:** Compartilhar as conclusões e aprendizados no LinkedIn e outros canais.
+Ao longo do projeto, irei implementar, treinar e avaliar cada um dos modelos propostos. Os resultados serão analisados e comparados, e os insights obtidos contribuirão para definir qual abordagem é a mais adequada para a previsão dos preços de veículos no cenário atual.
 
----
-
-## Conclusão
-
-Este projeto é um esforço contínuo para explorar o potencial de **Machine Learning** no mercado automotivo brasileiro. A previsão de preços de veículos é uma aplicação prática e de alto impacto, com benefícios diretos para consumidores, empresas e instituições financeiras.
-
-Convido você a explorar os notebooks disponíveis no repositório e acompanhar o progresso deste projeto! Qualquer feedback ou sugestão será muito bem-vindo. 🚀
+Na conclusão do projeto, farei uma análise comparativa detalhada com as métricas de avaliação (como o MAE), tempos de treinamento e outras observações relevantes para cada modelo. Essa comparação será integrada à seção de Conclusão, permitindo uma visão clara de qual técnica apresentou um desempenho superior.
 
 ---
